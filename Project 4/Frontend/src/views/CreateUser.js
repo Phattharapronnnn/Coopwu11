@@ -24,11 +24,11 @@ function CreateUser() {
     setIsReady(false);
     axios
       .post(`${process.env.REACT_APP_API_URL}/user`, data)
-       alert("สำเร็จ")
+    
       .then((res) => {
         axios.get(`${process.env.REACT_APP_API_URL}/user`).then((res) => {
           setIsReady(true);
-        
+          alert("สำเร็จ") 
         });
         // handleClose();
         

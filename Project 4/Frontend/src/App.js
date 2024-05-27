@@ -12,6 +12,7 @@ import Products from './views/Product';
 import DetailProduct from './views/DetailProduct';
 import EditProduct from './views/EditProduct';
 import Checkout from './views/Checkout';
+import CartProduct from './views/CartProduct';
 function App() {
   return (
    <div>
@@ -25,7 +26,7 @@ function App() {
           <Route path='/' element={<DetailProduct/>} />
           <Route path='/products/edit/:id' element={<EditProduct />} />
           <Route path='/Checkout/:id' element={<Checkout />} />
-
+          <Route path='/Cart' element={<CartProduct/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

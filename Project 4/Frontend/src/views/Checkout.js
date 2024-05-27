@@ -13,7 +13,8 @@ function ShoppingCart() {
     const [productItem, setProduct] = useState(null);
     const [quantities, setQuantities] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
-
+   
+   
     useEffect(() => {
         axios
             .get(`${process.env.REACT_APP_API_URL}/product/${id}?populateImage=true`)
@@ -47,7 +48,7 @@ function ShoppingCart() {
               <CardContent>
                 <div>Search Box</div>
                 <Input
-                  placeholder='Input Some Search Word'
+                  placeholder='ค้นหาสินค้า'
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <div>
